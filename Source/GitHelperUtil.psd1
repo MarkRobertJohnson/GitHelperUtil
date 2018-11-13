@@ -7,7 +7,7 @@
 # Script module or binary module file associated with this manifest.
 RootModule = 'GitHelperUtil.psm1'
 
-ModuleVersion = '1.0.1'
+ModuleVersion = '1.0.2'
 GUID = '4bfa46dc-235b-4832-a685-67062aa907f6'
 Author = 'MarkRobertJohnson'
 CompanyName = 'Axian, Inc.'
@@ -18,9 +18,9 @@ Description = 'Some basic functions for bootstrapping Git and executing Git comm
 PrivateData = @{
     PSData = @{
          Tags = @('git','helper','util','powershell')
-         LicenseUri = 'https://www.github.com/MarkRobertJohnson/GitHelperUtil/license'
+         LicenseUri = 'https://www.github.com/MarkRobertJohnson/GitHelperUtil/master/LICENSE'
          ProjectUri = 'https://www.github.com/MarkRobertJohnson/GitHelperUtil'
-         IconUri = 'https://www.github.com/MarkRobertJohnson/GitHelperUtil/gallery-icon-100x100.png'
+         IconUri = 'https://www.github.com/MarkRobertJohnson/GitHelperUtil/master/gallery-icon-100x100.png'
          ReleaseNotes = 'Module Created'
          ExternalModuleDependencies = @('')
     } # End of PSData hashtable

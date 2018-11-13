@@ -8,7 +8,7 @@
         NOTE: This is boiler plate code that can be copied to any new module
         ********************************************************************
 #>
-$moduleName = [io.path]::GetFileNameWithoutExtension((gci $moduleRoot | where { $_.name -like '*.psm1' -or $_.name -like '*.psd1' } | select -First 1).FullName)
+$moduleName = [io.path]::GetFileNameWithoutExtension((gci $moduleRoot | where { $_.name -like '*.psm1' } | select -First 1).FullName)
 $functionNamesToExport = @()
 #All *.ps1 files in these folders will be included in the module
 $functionPaths = @("$ModuleRoot\Public\*.ps1", "$ModuleRoot\Private\*.ps1")
@@ -16,7 +16,6 @@ $excludeFunctionPaths = @('*.Tests.ps1','*.Test.ps1')
 
 foreach($functionPath in $functionPaths) {
     # load all functions from files in the "Functions" folder, by convention, only functions matching file names are exported
-Write-host (Gci $functionPath -exclude $excludeFunctionPaths -recurse -force)
     Gci $functionPath -exclude $excludeFunctionPaths -recurse -force  |
         % { 
             Write-Debug "Importing functions from '$($_.FullName)'"

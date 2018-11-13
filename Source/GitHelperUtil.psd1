@@ -7,11 +7,11 @@
 # Script module or binary module file associated with this manifest.
 RootModule = 'GitHelperUtil.psm1'
 
-ModuleVersion = '1.0.0'
+ModuleVersion = '1.0.1'
 GUID = '4bfa46dc-235b-4832-a685-67062aa907f6'
 Author = 'MarkRobertJohnson'
 CompanyName = 'Axian, Inc.'
-Copyright = '? 2018 Axian, Inc.'
+Copyright = '2018 Axian, Inc.'
 Description = 'Some basic functions for bootstrapping Git and executing Git commands form PowerShell'
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.

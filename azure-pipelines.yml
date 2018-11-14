@@ -13,7 +13,7 @@ steps:
 - powershell: Install-Module ModuleBuilder
   displayName: Install ModuleBuilder
 
-- powershell: Build-Module ./Source/ -SemVer $(GitVersion.InformationalVersion) -Verbose
+- powershell: Import-Module ModuleBuilder; Build-Module ./Source/ -SemVer $(GitVersion.InformationalVersion) -Verbose
   displayName: 'Build module using ModuleBuilder'
 
 - task: richardfennellBM.BM-VSTS-PesterRunner-Task.Pester-Task.Pester@8

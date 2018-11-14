@@ -10,10 +10,7 @@ steps:
 - task: gittools.gitversion.gitversion-task.GitVersion@4
   displayName: GitVersion
 
-- powershell: Install-Module ModuleBuilder
-  displayName: Install ModuleBuilder
-
-- powershell: Import-Module ModuleBuilder; Build-Module ./Source/ -SemVer $(GitVersion.InformationalVersion) -Verbose
+- powershell: Install-Module ModuleBuilder; Import-Module ModuleBuilder; Build-Module ./Source/ -SemVer $(GitVersion.InformationalVersion) -Verbose
   displayName: 'Build module using ModuleBuilder'
 
 - task: richardfennellBM.BM-VSTS-PesterRunner-Task.Pester-Task.Pester@8
